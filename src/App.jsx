@@ -43,8 +43,8 @@ function App() {
 
       if (response.ok) {
         const result = await response.json()
-        setAnalysisStatus({ status: 'uploaded', analysisId: result.analysis_id })
-        pollAnalysisStatus(result.analysis_id)
+        setAnalysisStatus({ status: 'uploaded', analysisId: result.analysisId })
+        pollAnalysisStatus(result.analysisId)
       } else {
         throw new Error('Erro no upload do vídeo')
       }
